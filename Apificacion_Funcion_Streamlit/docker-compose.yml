@@ -1,0 +1,12 @@
+version: '3.8'  # Asegúrate de usar una versión soportada
+
+services:
+  rossmann-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+      - ./models:/app/models 
